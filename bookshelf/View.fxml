@@ -137,8 +137,8 @@
                       <TableColumn id="idColumn" fx:id="idColumn" editable="false" prefWidth="30.0" resizable="false" text="ID" />
                       <TableColumn id="titleColumn" fx:id="titleColumn" editable="false" prefWidth="170.0" resizable="false" text="Title" />
                       <TableColumn id="authorColumn" fx:id="authorColumn" editable="false" prefWidth="170.0" resizable="false" text="Author" />
-                        <TableColumn id="publisherColumn" fx:id="publisherColumn" editable="false" prefWidth="170.0" resizable="false" text="Publisher" />
-                        <TableColumn id="yearColumn" fx:id="yearColumn" editable="false" prefWidth="50.0" resizable="false" text="Year" />
+                        <TableColumn id="publisherColumn" fx:id="publisherColumn" editable="false" prefWidth="160.0" resizable="false" text="Publisher" />
+                        <TableColumn id="yearColumn" fx:id="yearColumn" editable="false" prefWidth="45.0" resizable="false" text="Year" />
                         <TableColumn id="pagesColumn" fx:id="pagesColumn" editable="false" prefWidth="45.0" resizable="false" text="Pages" />
                     </columns>
                   </TableView>
