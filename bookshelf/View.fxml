@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bookshelf.Controller">
+   <children>
+      <ImageView fitHeight="156.0" fitWidth="650.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../books.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#e1d8ae" height="71.0" layoutX="70.0" layoutY="16.0" stroke="#748622" strokeType="INSIDE" strokeWidth="5.0" width="200.0" />
+      <Label alignment="CENTER" layoutX="70.0" layoutY="25.0" prefHeight="53.0" prefWidth="200.0" text="Bookshelf" textAlignment="CENTER" textFill="#748622">
+         <font>
+            <Font name="Book Antiqua Italic" size="42.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#748622" height="34.0" layoutX="70.0" layoutY="98.0" stroke="#e1d8ae" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="106.0" prefHeight="17.0" prefWidth="200.0" text="by miklos1125" textFill="#e1d8ae">
+         <font>
+            <Font name="Book Antiqua" size="14.0" />
+         </font>
+      </Label>
+      <Group>
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e1d8ae" height="34.0" layoutX="431.0" layoutY="107.0" stroke="#ae5d40" strokeType="INSIDE" strokeWidth="4.0" width="200.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e0d7af" height="34.0" layoutX="376.0" layoutY="61.0" stroke="#748622" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e1d8ae" height="34.0" layoutX="331.0" layoutY="16.0" stroke="#1e3b75" strokeType="INSIDE" strokeWidth="4.0" width="200.0" />
+            <RadioButton id="listButton" fx:id="listButton" layoutX="421.0" layoutY="69.0" mnemonicParsing="false" selected="true" text="list all books" textFill="#748622">
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="operation" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton id="modButton" fx:id="modButton" layoutX="462.0" layoutY="112.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="138.0" text="modify / remove" textFill="#ae5d40" toggleGroup="$operation">
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton id="addButton" fx:id="addButton" layoutX="373.0" layoutY="24.0" mnemonicParsing="false" text="add new book" textFill="#1e3b75" toggleGroup="$operation">
+               <font>
+                  <Font name="Book Antiqua" size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Group>
+    <AnchorPane layoutY="156.0" minHeight="0.0" minWidth="0.0" prefHeight="594.0" prefWidth="650.0">
+         <children>
+            <Pane id="addPane" fx:id="addPane" layoutX="112.0" layoutY="68.0" prefHeight="593.0" prefWidth="513.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1d8ae" height="593.0" stroke="#1e3b75" strokeType="INSIDE" strokeWidth="7.0" width="650.0" />
+                  <VBox alignment="TOP_CENTER" layoutX="120.0" layoutY="38.0" prefHeight="475.0" prefWidth="410.0" spacing="55.0">
+                     <children>
+                        <TextField id="titleInput" fx:id="titleInput" promptText="title">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="authorInput" fx:id="authorInput" promptText="author">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="publisherInput" fx:id="publisherInput" promptText="publisher">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="yearInput" fx:id="yearInput" alignment="CENTER" maxWidth="131.0" minWidth="50.0" prefHeight="28.0" prefWidth="131.0" promptText="year of publishing">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="pagesInput" fx:id="pagesInput" alignment="CENTER" maxWidth="131.0" minWidth="50.0" prefHeight="28.0" prefWidth="131.0" promptText="number of pages">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button id="addToLibButton" fx:id="addToLibButton" mnemonicParsing="false" onAction="#addToLibButtonAction" text="add to library" textFill="#1e3b75">
+                           <font>
+                              <Font name="Book Antiqua" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Label layoutX="93.0" layoutY="38.0" text="*" textFill="#ae5d40">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="88.0" layoutY="119.0" text="**" textFill="#ae5d40">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="73.0" layoutY="527.0" text="* Required data!" textFill="#ae5d40">
+                     <font>
+                        <Font name="Book Antiqua" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="299.0" layoutY="527.0" text="**  When left blank, author will be set to &quot;unknown&quot;." textFill="#ae5d40">
+                     <font>
+                        <Font name="Book Antiqua" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="modPane" fx:id="modPane" prefHeight="593.0" prefWidth="513.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1d8ae" height="593.0" stroke="#ae5d40" strokeType="INSIDE" strokeWidth="7.0" width="650.0" />
+                  <Label layoutX="239.0" layoutY="286.0" text="Under construction..." textFill="#748622">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane id="listPane" fx:id="listPane" prefHeight="593.0" prefWidth="513.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0d7af" height="595.0" stroke="#748622" strokeType="INSIDE" strokeWidth="7.0" width="650.0" />
+                  <TableView id="mainTable" fx:id="mainTable" editable="true" layoutX="7.0" layoutY="7.0" prefHeight="581.0" prefWidth="637.0">
+                      <placeholder>
+                          <Label id="placeholder" fx:id="placeholder" text="No data." />
+                      </placeholder>
+                    <columns>
+                      <TableColumn id="idColumn" fx:id="idColumn" editable="false" prefWidth="30.0" resizable="false" text="ID" />
+                      <TableColumn id="titleColumn" fx:id="titleColumn" editable="false" prefWidth="170.0" resizable="false" text="Title" />
+                      <TableColumn id="authorColumn" fx:id="authorColumn" editable="false" prefWidth="170.0" resizable="false" text="Author" />
+                        <TableColumn id="publisherColumn" fx:id="publisherColumn" editable="false" prefWidth="170.0" resizable="false" text="Publisher" />
+                        <TableColumn id="yearColumn" fx:id="yearColumn" editable="false" prefWidth="50.0" resizable="false" text="Year" />
+                        <TableColumn id="pagesColumn" fx:id="pagesColumn" editable="false" prefWidth="45.0" resizable="false" text="Pages" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
